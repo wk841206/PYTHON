@@ -1,0 +1,19 @@
+#search an element in a ordered list using binary search
+import random
+orderedList = list(range(1,random.randint(2,999)))
+numberToFind = int(input("What number are you looking for? "))
+
+def find (orderedList,numberToFind):
+    startindex = 0
+    endindex = len(orderedList) - 1
+    while startindex < endindex:
+        midindex = (startindex + endindex) // 2
+        if numberToFind == orderedList[midindex]:
+            return True
+        elif numberToFind < orderedList[midindex]:
+            endindex = midindex - 1
+        else:
+            startindex = midindex + 1
+
+
+print(find(orderedList,numberToFind))
