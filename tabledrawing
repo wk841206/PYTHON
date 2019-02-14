@@ -1,0 +1,16 @@
+def print_horiz_line():  #print horiontal line
+    print(" ---" * (col))
+
+def print_vert_line(): #print vertical line
+    print("|   " * (col + 1))
+raw = input('What is the size of the board,in format of  row * col ')
+size = raw.split('*')
+col = int(size[0])
+row = int(size[1])
+i = 0
+
+while i < row:
+    print_horiz_line()
+    print_vert_line()
+    i += 1
+print_horiz_line()
