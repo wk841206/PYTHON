@@ -1,0 +1,24 @@
+#make the con guess what number you are thinking of
+import random
+minimum = 1
+maximum = 100
+attempt = 0
+
+
+while True:
+    num = random.randint(minimum, maximum)
+    print("Is it "+ str(num) + '?')
+    attempt += 1
+    answer = input()
+    if answer == 'low':
+        minimum = num + 1
+    elif answer == 'high':
+        maximum = num - 1
+    elif answer == 'yes':
+        if attempt == 1:
+            print("lucky guess, i think")
+        else:
+            print('woh,it took me ' + str(attempt) + ' times')
+        break
+    else:
+        print('invalid input')
