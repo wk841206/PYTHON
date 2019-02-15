@@ -1,0 +1,26 @@
+def isPrime(n):  #decide if it's prime
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+
+    return True
+
+def factorize(x): 
+    divisor = 2
+    factors = []
+    while x > 1: 
+        if isPrime(divisor):
+            if x % divisor == 0:
+                x = x / divisor
+                factors.append(divisor)
+            else: 
+                divisor += 1
+
+        else: 
+            divisor += 1
+    return factors
+
+
+
+x = int(input("gimme a number: "))
+print(factorize(x))
