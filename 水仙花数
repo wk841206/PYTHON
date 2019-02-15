@@ -1,0 +1,12 @@
+#水仙花数"是指一个三位数，其各位数字立方和等于该数本身，153，370，371，407都是水仙花数
+count = 0
+for i in range(100,1000):
+    array = str(i)
+    a = int(array[0])
+    b = int(array[1])
+    c = int(array[2])
+    if a**3 + b**3 + c**3 == i:
+        print(i)
+        count += 1
+
+print(f'{count} counts')
