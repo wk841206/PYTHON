@@ -1,0 +1,25 @@
+#GCD  Greatest Common Divisor
+#LCM  Least Common Multiple
+
+def gcd(x,y):
+    if x <= y:
+        least = x
+    else:
+        least = y
+
+    for i in range(1,least+1):
+        if x % i == 0 and y % i == 0:
+            gcd = i
+    return gcd
+
+def lcm(x,y):
+    if x >= y:
+        greater = x
+    else:
+        greater = y
+
+    for i in range(greater,x*y+1):
+        if i % x == 0 and i % y == 0:
+            return i
+print(gcd(40,80))
+print(lcm(21,42))
