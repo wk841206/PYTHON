@@ -1,0 +1,16 @@
+num = int(input()) #while loops
+fractorial = 1
+
+while num > 1:
+    fractorial *= num
+    num -=1
+
+print(fractorial)
+
+x = int(input())  #function
+def frac(x):
+    if x == 0:
+        return 1
+    else:
+        return x * frac(x-1)
+print(frac(x))
