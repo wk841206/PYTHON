@@ -1,0 +1,20 @@
+a = [int(x) for x in input('coord').split(',')]
+row = a[0]
+col = a[1]
+oneDimension = []
+twoDimension = []
+for i in range(row):
+    oneDimension = []
+    for j in range(col):
+        oneDimension.append(i*j)
+    twoDimension.append(oneDimension)
+print(twoDimension)
+
+
+multi= [[0 for a in range(col)] for b in range(row)]
+
+for i in range(row):
+    for j in range(col):
+        multi[i][j] = i * j
+
+print(multi)
